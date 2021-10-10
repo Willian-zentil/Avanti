@@ -3,18 +3,35 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Asset Management</title>
+  <title>Avanti | E-commerce</title>
 </head>
 
 <body>
   <div class="home">
+    <div class="bg-gray"></div>
     <header class="header">
       <div class="container head">
+        <a class="only-mob menu-hamburguer">
+          <span></span>
+        </a>
+
+        <div class="only-mob menu-mob">
+          <div>
+            <h4>Categoria</h4>
+          </div>
+          <ul>
+            <li><a href="">Menu 1</a></li>
+            <li><a href="">Menu 2</a></li>
+            <li><a href="">Menu 2</a></li>
+            <li><a href="">Menu 2</a></li>
+          </ul>
+        </div>
+
         <a href="">
           <img src="./logo.png" alt="logo avanti" id="logo">
         </a>
 
-        <div>
+        <div class="only-desk">
           <input type="text" name="" id="search-bar" placeholder="O que procura?">
           <button id="btn-search">OK</button>
         </div>
@@ -34,48 +51,234 @@
     </header>
 
     <div class="banner-home container">
-      <img src="./Banner_home.png" alt="">
+      <a href="">
+        <img src="./Banner_home.png" alt="Banner Promoção do dia">
+      </a>
     </div>
 
     <div class="promocao container">
       <h2>PROMOÇÃO DO DIA</h2>
       <div class="items">
-        <div class="promo-banner">
-          <img src="./Banner-vestido-home.webp" alt="Banner promoção do dia">
+        <div class="promo-banner only-desk">
+          <img src="./Banner-mais-vendidos.jpg" alt="Banner promoção do dia">
         </div>
         <div class="promo-produtos">
-          <div class="card-produto">
-            <a href=""><img src="./prod-img.webp"></a>
-            <h4>Camiseta feminina do tipo floral tamanho P Camiseta Floral</h4>
-            <div class="price">
-              <span>R$34,60</span>
-              <span>R$34,60</span>
+          <div class="swiper promo">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="card-produto swiper-slide">
+                <a href=""><img src="./prod-img.webp"></a>
+                <h4>Camiseta feminina do tipo floral tamanho P Camiseta Floral</h4>
+                <div class="price">
+                  <span>R$34,60</span>
+                  <span>R$34,60</span>
+                </div>
+                <div class="input-qtd">
+                  <div>
+                    <button class="btn-plus"><img src="./icon-plus.png" alt=""></button>
+                    <input type="number" value="1">
+                    <button class="btn-minus"><img src="./icon-minus.webp" alt=""></button>
+                  </div>
+                </div>
+                <button class="buy active">adicionar</button>
+              </div>
+              <div class="card-produto swiper-slide">
+                <a href=""><img src="./prod-img.webp"></a>
+                <h4>Camiseta feminina do tipo floral tamanho P Camiseta Floral</h4>
+                <div class="price">
+                  <span>R$34,60</span>
+                  <span>R$34,60</span>
+                </div>
+                <div class="input-qtd">
+                  <div>
+
+                  </div>
+                </div>
+                <button class="buy off">adicionar</button>
+              </div>
             </div>
-            <button class="buy active">adicionar</button>
-          </div>
-          <div class="card-produto">
-            <a href=""><img src="./prod-img.webp"></a>
-            <h4>Camiseta feminina do tipo floral tamanho P Camiseta Floral</h4>
-            <div class="price">
-              <span>R$34,60</span>
-              <span>R$34,60</span>
-            </div>
-            <button class="buy active">adicionar</button>
-          </div>
-          <div class="card-produto">
-            <a href=""><img src="./prod-img.webp"></a>
-            <h4>Camiseta feminina do tipo floral tamanho P Camiseta Floral</h4>
-            <div class="price">
-              <span>R$34,60</span>
-              <span>R$34,60</span>
-            </div>
-            <button class="buy active">adicionar</button>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
+    <div class="mais-vendidos container">
+      <div class="banner-mais-vendidos">
+        <a href="">
+          <img src="./Banner-promo.webp" alt="">
+        </a>
+      </div>
+      <h2>os mais vendidos</h2>
+      <div class="mais-vendidos-vitrine">
+        <!---->
+        <div class="swiper vitrine">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="card-produto swiper-slide">
+              <a href=""><img src="./prod-img.webp"></a>
+              <h4>Camiseta feminina do tipo floral tamanho P Camiseta Floral</h4>
+              <div class="price">
+                <span>R$34,60</span>
+                <span>R$34,60</span>
+              </div>
+              <div class="input-qtd">
+                <div>
+                  <button class="btn-plus"><img src="./icon-plus.png" alt=""></button>
+                  <input type="number" value="1">
+                  <button class="btn-minus"><img src="./icon-minus.webp" alt=""></button>
+                </div>
+              </div>
+              <button class="buy active">adicionar</button>
+            </div>
+            <div class="card-produto swiper-slide">
+              <a href=""><img src="./prod-img.webp"></a>
+              <h4>Camiseta feminina do tipo floral tamanho P Camiseta Floral</h4>
+              <div class="price">
+                <span>R$34,60</span>
+                <span>R$34,60</span>
+              </div>
+              <div class="input-qtd">
+                <div>
+                  <button class="btn-plus"><img src="./icon-plus.png" alt=""></button>
+                  <input type="number" value="1">
+                  <button class="btn-minus"><img src="./icon-minus.webp" alt=""></button>
+                </div>
+              </div>
+              <button class="buy active">adicionar</button>
+            </div>
+            <div class="card-produto swiper-slide">
+              <a href=""><img src="./prod-img.webp"></a>
+              <h4>Camiseta feminina do tipo floral tamanho P Camiseta Floral</h4>
+              <div class="price">
+                <span>R$34,60</span>
+                <span>R$34,60</span>
+              </div>
+              <div class="input-qtd">
+                <div>
+                  <button class="btn-plus"><img src="./icon-plus.png" alt=""></button>
+                  <input type="number" value="1">
+                  <button class="btn-minus"><img src="./icon-minus.webp" alt=""></button>
+                </div>
+              </div>
+              <button class="buy active">adicionar</button>
+            </div>
+            <div class="card-produto swiper-slide">
+              <a href=""><img src="./prod-img.webp"></a>
+              <h4>Camiseta feminina do tipo floral tamanho P Camiseta Floral</h4>
+              <div class="price">
+                <span>R$34,60</span>
+                <span>R$34,60</span>
+              </div>
+              <div class="input-qtd">
+                <div>
+                  <button class="btn-plus"><img src="./icon-plus.png" alt=""></button>
+                  <input type="number" value="1">
+                  <button class="btn-minus"><img src="./icon-minus.webp" alt=""></button>
+                </div>
+              </div>
+              <button class="buy active">adicionar</button>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <!---->
+      </div>
+    </div>
+
+    <div class="termos">
+      <div class="container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, expedita! Neque, saepe. Doloribus quam, dolores, nemo, quae alias deserunt cumque pariatur dolore adipisci ullam repudiandae voluptatibus sed fugit sapiente architecto! Lorem ipsum dolor, sit <br> amet consectetur adipisicing elit. Voluptatibus, expedita! <br> Neque, saepe. Doloribus quam, dolores, nemo, <br> alias deserunt cumque pariatur dolore adipisci ullam repudiandae voluptatibus sed fugit sapiente architecto!</p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="categorias">
+          <h4>Categorias</h4>
+          <div>
+            <a href="">
+              <h5>Categorias</h5>
+            </a>
+            <a href="">
+              <h5>Categorias</h5>
+            </a>
+            <a href="">
+              <h5>Categorias</h5>
+            </a>
+            <a href="">
+              <h5>Categorias</h5>
+            </a>
+            <a href="">
+              <h5>Categorias</h5>
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <h5>Categorias</h5>
+            </a>
+            <a href="">
+              <h5>Categorias</h5>
+            </a>
+            <a href="">
+              <h5>Categorias</h5>
+            </a>
+            <a href="">
+              <h5>Categorias</h5>
+            </a>
+            <a href="">
+              <h5>Categorias</h5>
+            </a>
+          </div>
+        </div>
+        <div class="mapa-site">
+          <h4>Institucional</h4>
+          <a href="">
+            <h5>Privacidade e Termos de Uso</h5>
+          </a>
+          <a href="">
+            <h5>Trabalhe Conosco</h5>
+          </a>
+          <a href="">
+            <h5>Política de Troca e Devolução</h5>
+          </a>
+          <a href="">
+            <h5>Política de Frete</h5>
+          </a>
+          <a href="">
+            <h5>Fale Conosco</h5>
+          </a>
+        </div>
+        <div class="fale-conosco">
+          <h4>Fale conosco</h4>
+          <h5>atendimento@avanti.com.br</h5>
+          <h5>(14)00000-0000</h5>
+          <div class="social-media">
+            <a href=""><img src="./facebook_icon.png" alt="icone facebook"></a>
+            <a href=""><img src="./insta-icon.png" alt="icone instagram"></a>
+            <a href=""><img src="./linkedin-icon.png" alt="icone linkedin"></a>
+            <a href=""><img src="./wpp-icon.svg" alt="icone whatsapp"></a>
+          </div>
+        </div>
+      </div>
+      <div class="made-by">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus proin neque montes, eget. Porta et diam nunc in massa turpis ultricies. Nibh ullamcorper id tellus volutpat elementum morbi egestas nulla id. In in in leo sed mattis.</p>
+      </div>
+    </footer>
+
+  </div>
 
   <script src="bundle.js"></script>
 </body>
