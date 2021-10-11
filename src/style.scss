@@ -21,6 +21,9 @@
   height: 100%;
   left: -100%;
   top: 0;
+  .off {
+    display: none;
+  }
   ul {
     list-style: none;
     display: flex;
@@ -215,6 +218,8 @@ input::-webkit-inner-spin-button {
       border-radius: 12px;
       padding: 11px 19px;
       font-size: 13px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
     }
     #btn-search {
       width: 111px;
@@ -233,6 +238,8 @@ input::-webkit-inner-spin-button {
     }
     #minicart {
       padding: 8px 10px;
+      min-width: 21px;
+      min-height: 20px;
       border: 0px solid #F8F8F8;
       box-shadow: 0px 0px 8px #00000029;
       border-radius: 4px;
@@ -241,6 +248,10 @@ input::-webkit-inner-spin-button {
       img {
         width: 20px;
         height: 20px;
+        display: none;
+        &.load {
+          display: block;
+        }
       }
     }
   }

@@ -73,7 +73,7 @@ window.onload = function (){
       //promoção do dia vitrine
       for (let i = 0; i < 2; i++) {
 
-        cardProdPromocao += `<div class="card-produto swiper-slide" data-id="${resp[i].id}"><a href=""><img src="./prod-img.webp"></a><h4>${resp[i].name}</h4><div class="price"><span>${resp[i].bestPrice}</span><span>${resp[i].sellingPrice}</span></div><div class="input-qtd"><div><button class="btn-plus"><img src="./icon-plus.png" alt=""></button><input type="number" value="1"><button class="btn-minus"><img src="./icon-minus.webp" alt=""></button></div></div><button class="buy ${resp[i].available <= 0 ? "off" : "active" }">adicionar</button></div>`;
+        cardProdPromocao += `<div class="card-produto swiper-slide" data-id="${resp[i].id}"><a href=""><img src="./prod-img.webp"></a><h4>${resp[i].name}</h4><div class="price"><span>${resp[i].bestPrice}</span><span>${resp[i].sellingPrice}</span></div><div class="input-qtd"><div><button class="btn-minus"><img src="./icon-minus.webp" alt=""></button><input type="number" value="1"><button class="btn-plus"><img src="./icon-plus.png" alt=""></button></div></div><button class="buy ${resp[i].available <= 0 ? "off" : "active" }">adicionar</button></div>`;
   
       }
       document.querySelector(".promo-produtos .swiper-wrapper").innerHTML = cardProdPromocao;
@@ -81,7 +81,7 @@ window.onload = function (){
       //os mais vendidos
       for (let i = 0; i < 6; i++) {
 
-        cardProdMaisVendidos += `<div class="card-produto swiper-slide" data-id="${resp[i].id}"><a href=""><img src="./prod-img.webp"></a><h4>${resp[i].name}</h4><div class="price"><span>${resp[i].bestPrice}</span><span>${resp[i].sellingPrice}</span></div><div class="input-qtd"><div><button class="btn-plus"><img src="./icon-plus.png" alt=""></button><input type="number" value="1"><button class="btn-minus"><img src="./icon-minus.webp" alt=""></button></div></div><button class="buy ${resp[i].available <= 0 ? "off" : "active" }">${resp[i].available <= 0 ? "Indisponivel" : "Adicionar" }</button></div>`;
+        cardProdMaisVendidos += `<div class="card-produto swiper-slide" data-id="${resp[i].id}"><a href=""><img src="./prod-img.webp"></a><h4>${resp[i].name}</h4><div class="price"><span>${resp[i].bestPrice}</span><span>${resp[i].sellingPrice}</span></div><div class="input-qtd"><div><button class="btn-minus"><img src="./icon-minus.webp" alt=""></button><input type="number" value="1"><button class="btn-plus"><img src="./icon-plus.png" alt=""></button></div></div><button class="buy ${resp[i].available <= 0 ? "off" : "active" }">${resp[i].available <= 0 ? "Indisponivel" : "Adicionar" }</button></div>`;
   
       }
       document.querySelector(".mais-vendidos .swiper-wrapper").innerHTML = cardProdMaisVendidos;
@@ -116,14 +116,15 @@ window.onload = function (){
           }
           localStorage.setItem(id, qtd);
           if(localStorage.getItem(id) == 0){
+            e.target.innerHTML = "Indisponivel";
             e.target.classList.add('off');
             e.target.disabled = true;
-            e.target.innerHTML = "Indisponivel"
 
             element = document.querySelectorAll('[data-id="'+ e.target.parentElement.attributes[1].value +'"]');
             for (let n = 0; n < element.length; n++) {
               element[n].childNodes[4].classList.add('off');
               element[n].childNodes[4].disabled = true;
+              element[n].childNodes[4].innerHTML = "Indisponivel";
             }
           }
           document.querySelector(".flag").innerHTML = tot;
@@ -137,7 +138,8 @@ window.onload = function (){
 
       })
     }
-    
+    document.querySelector("#minicart img").classList.add("load");
+    document.querySelector(".menu-mob").classList.remove("off");
   }, 1000);
 
   //load products
@@ -155,4 +157,33 @@ window.onload = function (){
     console.log(error);
   });
   localStorage.setItem("total", 0);
+
+  //input qtd
+  setTimeout(() => {
+    let qtdPlus = document.querySelectorAll(".btn-plus");
+    let qtdMinus = document.querySelectorAll(".btn-minus");
+    let plus = 0;
+    let minus = 0;
+
+    for (let i = 0; i < qtdPlus.length; i++) {
+      qtdPlus[i].addEventListener("click", ()=>{
+        
+        plus = Number(qtdPlus[i].parentElement.children[1].value) 
+        plus += 1;
+
+        qtdPlus[i].parentElement.children[1].value = plus;
+      })
+    }
+    for (let i = 0; i < qtdMinus.length; i++) {
+      qtdMinus[i].addEventListener("click", ()=>{
+ 
+        minus = Number(qtdMinus[i].parentElement.children[1].value) 
+        if(minus != 0){
+          minus -= 1;
+        }
+
+        qtdMinus[i].parentElement.children[1].value = minus;
+      })
+    }
+  }, 1000);
 }
