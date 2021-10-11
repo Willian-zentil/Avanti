@@ -73,7 +73,7 @@ window.onload = function (){
       //promoção do dia vitrine
       for (let i = 0; i < 2; i++) {
 
-        cardProdPromocao += `<div class="card-produto swiper-slide" data-id="${resp[i].id}"><a href=""><img src="./prod-img.webp"></a><h4>${resp[i].name}</h4><div class="price"><span>${resp[i].bestPrice}</span><span>${resp[i].sellingPrice}</span></div><div class="input-qtd"><div><button class="btn-minus"><img src="./icon-minus.webp" alt=""></button><input type="number" value="1"><button class="btn-plus"><img src="./icon-plus.png" alt=""></button></div></div><button class="buy ${resp[i].available <= 0 ? "off" : "active" }">adicionar</button></div>`;
+        cardProdPromocao += `<div class="card-produto swiper-slide" data-id="${resp[i].id}"><a href=""><img src="./assets/prod-img.webp"></a><h4>${resp[i].name}</h4><div class="price"><span>${resp[i].bestPrice}</span><span>${resp[i].sellingPrice}</span></div><div class="input-qtd"><div><button class="btn-minus"><img src="./assets/icon-minus.webp" alt=""></button><input type="number" value="1"><button class="btn-plus"><img src="./assets/icon-plus.png" alt=""></button></div></div><button class="buy ${resp[i].available <= 0 ? "off" : "active" }">adicionar</button></div>`;
   
       }
       document.querySelector(".promo-produtos .swiper-wrapper").innerHTML = cardProdPromocao;
@@ -81,7 +81,7 @@ window.onload = function (){
       //os mais vendidos
       for (let i = 0; i < 6; i++) {
 
-        cardProdMaisVendidos += `<div class="card-produto swiper-slide" data-id="${resp[i].id}"><a href=""><img src="./prod-img.webp"></a><h4>${resp[i].name}</h4><div class="price"><span>${resp[i].bestPrice}</span><span>${resp[i].sellingPrice}</span></div><div class="input-qtd"><div><button class="btn-minus"><img src="./icon-minus.webp" alt=""></button><input type="number" value="1"><button class="btn-plus"><img src="./icon-plus.png" alt=""></button></div></div><button class="buy ${resp[i].available <= 0 ? "off" : "active" }">${resp[i].available <= 0 ? "Indisponivel" : "Adicionar" }</button></div>`;
+        cardProdMaisVendidos += `<div class="card-produto swiper-slide" data-id="${resp[i].id}"><a href=""><img src="./assets/prod-img.webp"></a><h4>${resp[i].name}</h4><div class="price"><span>${resp[i].bestPrice}</span><span>${resp[i].sellingPrice}</span></div><div class="input-qtd"><div><button class="btn-minus"><img src="./assets/icon-minus.webp" alt=""></button><input type="number" value="1"><button class="btn-plus"><img src="./assets/icon-plus.png" alt=""></button></div></div><button class="buy ${resp[i].available <= 0 ? "off" : "active" }">${resp[i].available <= 0 ? "Indisponivel" : "Adicionar" }</button></div>`;
   
       }
       document.querySelector(".mais-vendidos .swiper-wrapper").innerHTML = cardProdMaisVendidos;
